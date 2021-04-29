@@ -53,7 +53,7 @@ const countingAvailableMoney = () => {
 	totalDayInput.value = totalDay;
 	accumulationInput.value = totalPrecents * totalMonth / 100;
 	spend.value = totalExpenses;
-	totalYearInput.value = totalPrecents * totalMonth / 100 * 365;
+	totalYearInput.value = totalPrecents * totalMonth / 100 * 12;
 	//console.log(totalDay);
 	//console.log(strToNum(moneyBoxRange));
 
