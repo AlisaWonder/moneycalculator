@@ -1,0 +1,272 @@
+body {
+  background-color: #e3e5ff;
+  font-size: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1010px) {
+  .wrapper {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 740px) {
+  .wrapper {
+    max-width: 400px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1010px) {
+  .calculator {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 740px) {
+  .calculator__income {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+}
+
+@media (max-width: 740px) {
+  .calculator__expenses {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.calculator__total {
+  padding-top: 30px;
+}
+
+@media (max-width: 740px) {
+  .calculator__total {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+.calculator__title {
+  text-align: center;
+}
+
+.income__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input {
+  margin-top: 20px;
+  width: 250px;
+  font-size: 14px;
+  color: black;
+  padding: 10px;
+  border: 2px solid #ffffff;
+  outline: none;
+  background: #ffffff;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 10px rgba(2, 2, 2, 0.412);
+          box-shadow: 1px 1px 10px rgba(2, 2, 2, 0.412);
+  outline: none;
+}
+
+.input:focus {
+  -webkit-box-shadow: 1px 1px 10px rgba(13, 1, 119, 0.561);
+          box-shadow: 1px 1px 10px rgba(13, 1, 119, 0.561);
+}
+
+.expenses__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.total {
+  width: 200px;
+  font-size: 40px;
+  color: black;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  border-radius: 2px;
+  cursor: default;
+  font-weight: bold;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
+.total__title {
+  text-align: left;
+}
+
+.moneybox {
+  margin-left: 30px;
+}
+
+.moneybox__title {
+  margin-bottom: 40px;
+}
+
+.moneybox__slider {
+  position: relative;
+  background: #4134b1;
+  border-radius: 8px;
+  width: 300px;
+  height: 18px;
+}
+
+output {
+  position: absolute;
+  left: -20px;
+  top: -35px;
+  padding: 7px 10px;
+  color: white;
+  background: #4134b1;
+  border-radius: 10px 10px 0 10px;
+}
+
+#saving {
+  position: relative;
+  background: #4134b1;
+  border-radius: 8px;
+  width: 290px;
+  height: 18px;
+  left: 3px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
+#saving::-webkit-slider-thumb {
+  -webkit-box-shadow: 1px 1px 5px rgba(13, 1, 80, 0.534);
+          box-shadow: 1px 1px 5px rgba(13, 1, 80, 0.534);
+  -webkit-appearance: none;
+          appearance: none;
+  width: 26px;
+  height: 25px;
+  border-radius: 50%;
+  background: #f2f3ff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
+.result {
+  margin-left: 30px;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+}
+
+@media (max-width: 740px) {
+  .result {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 20px;
+    margin-left: 0;
+  }
+}
+
+.result__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.results {
+  width: 100px;
+  color: black;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  border-radius: 2px;
+  cursor: default;
+  font-weight: bold;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  font-size: 25px;
+}
+
+@media (max-width: 740px) {
+  .results {
+    font-size: 20px;
+  }
+}

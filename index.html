@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1 class="calculator__title">
+			Мой калькулятор накопленных средств
+		</h1>
+		<div class="calculator">
+			<div class="calculator__income">
+				<h2 class="income__title">
+					Доход в месяц
+				</h2>
+				<div class="income__items">
+					<input class="input" type="number" id="income-salary" placeholder="Зарплата">
+					<input class="input" type="number" id="income-freelance" placeholder="Фриланс">
+					<input class="input" type="number" id="income-extra-1" placeholder="Доп. доход">
+					<input class="input" type="number" id="income-extra-2" placeholder="Доп. доход">
+				</div>
+			</div>
+			<div class="calculator__expenses">
+				<h2 class="expenses__title">
+					Обязательные расходы в месяц
+				</h2>
+				<div class="expenses__items">
+					<input class="input" type="number" id="expenses-rent" placeholder="Аренда квартиры">
+					<input class="input" type="number" id="expenses-housing" placeholder="ЖКХ">
+					<input class="input" type="number" id="expenses-transport" placeholder="Транспорт">
+					<input class="input" type="number" id="expenses-credits" placeholder="Кредиты">
+				</div>
+			</div>
+			<div class="calculator__total">
+				<h3 class="total__title">
+					Доступно в месяц(без копилки)
+				</h3>
+				<input class="total" type="number" id="total-month" value="0" readonly>
+				<h3 class="total__title">
+					Доступно в день
+				</h3>
+				<input class="total" type="number" id="total-day" value="0" readonly>
+				<h3 class="total__title">
+					Накопим за год
+				</h3>
+				<input class="total" type="number" id="total-year" value="0" readonly>
+			</div>
+			<div class="moneybox">
+				<h2 class="moneybox__title title">
+					Копилка (Сколько откладываем?)
+				</h2>
+				<div class="moneybox__slider">
+					<output for="saving" id="volume">0<span>%</span></output>
+					<input type="range" min="0" max="100" value="0" id="saving" step="2" oninput="outputUpdate(value)">
+				</div>
+			</div>
+		</div>
+		<div class="result">
+			<div class="result__wrapper">
+				<h3 class="result__title">
+					Копим
+				</h3>
+				<input class="results" type="number" id="accumulation" value="0" readonly>
+			</div>
+			<div class="result__wrapper">
+				<h3 class="total__title">
+					Тратим
+				</h3>
+				<input class="results" type="number" id="expenses" value="0" readonly>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+
+</html>

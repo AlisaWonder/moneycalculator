@@ -1,0 +1,209 @@
+body {
+	background-color: rgb(227, 229, 255);
+	font-size: 15px;
+	font-family: "Source Sans Pro", sans-serif;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+	margin: 0 auto;
+
+	@media (max-width: 1010px) {
+		max-width: 700px;
+	}
+	@media (max-width: 740px) {
+		max-width: 400px;
+		align-items: center;
+	}
+}
+
+.calculator {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+
+	@media (max-width: 1010px) {
+		text-align: center;
+		justify-content: center;
+	}
+
+	&__income {
+		@media (max-width: 740px) {
+			order: 0;
+		}
+	}
+
+	&__expenses {
+		@media (max-width: 740px) {
+			order: 1;
+		}
+	}
+
+	&__total {
+		padding-top: 30px;
+		@media (max-width: 740px) {
+			order: 4;
+		}
+	}
+
+	&__title {
+		text-align: center;
+	}
+}
+.income {
+	&__title {
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		width: 300px;
+		align-items: center;
+	}
+}
+.input {
+	margin-top: 20px;
+	width: 250px;
+	font-size: 14px;
+	color: black;
+	padding: 10px;
+	border: 2px solid #ffffff;
+	outline: none;
+	background: #ffffff;
+	border-radius: 2px;
+	box-shadow: 1px 1px 10px rgba(2, 2, 2, 0.412);
+	outline: none;
+	&:focus {
+		box-shadow: 1px 1px 10px rgba(13, 1, 119, 0.561);
+	}
+}
+.expenses {
+	&__title {
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.total {
+	width: 200px;
+	font-size: 40px;
+	color: black;
+	padding: 5px;
+	border: none;
+	background: transparent;
+	border-radius: 2px;
+	cursor: default;
+	font-weight: bold;
+	appearance: none;
+	outline: none;
+	&__title {
+		text-align: left;
+	}
+}
+
+.moneybox {
+	margin-left: 30px;
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__slider {
+		position: relative;
+		background: rgb(65, 52, 177);
+		border-radius: 8px;
+		width: 300px;
+		height: 18px;
+	}
+}
+
+output {
+	position: absolute;
+	left: -20px;
+	top: -35px;
+	padding: 7px 10px;
+	color: rgb(255, 255, 255);
+	background: rgb(65, 52, 177);
+	border-radius: 10px 10px 0 10px;
+}
+.title {
+}
+
+#saving {
+	position: relative;
+	background: rgb(65, 52, 177);
+	border-radius: 8px;
+	width: 290px;
+	height: 18px;
+	left: 3px;
+	appearance: none;
+	outline: none;
+}
+
+#saving::-webkit-slider-thumb {
+	box-shadow: 1px 1px 5px rgba(13, 1, 80, 0.534);
+	appearance: none;
+	width: 26px;
+	height: 25px;
+	border-radius: 50%;
+	background: rgb(242, 243, 255);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	/* display: none; <- Crashes Chrome on hover */
+	-webkit-appearance: none;
+	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+	-moz-appearance: number-input;
+}
+
+.result {
+	margin-left: 30px;
+	margin-top: 40px;
+	display: flex;
+	font-size: 25px;
+	@media (max-width: 740px) {
+		display: flex;
+		flex-direction: column;
+		font-size: 20px;
+		margin-left: 0;
+	}
+	&__title {
+	}
+
+	&__wrapper {
+		display: flex;
+	}
+}
+.total {
+	&__title {
+	}
+}
+
+.results {
+	width: 100px;
+	color: black;
+	padding: 5px;
+	border: none;
+	background: transparent;
+	border-radius: 2px;
+	cursor: default;
+	font-weight: bold;
+	appearance: none;
+	outline: none;
+	font-size: 25px;
+	@media (max-width: 740px) {
+		font-size: 20px;
+	}
+}
